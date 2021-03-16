@@ -29,6 +29,18 @@ const carrito = [{
 ];
 
 // Mostrar una estructura de carrito de la compra.
+console.log("MOSTRAR ELEMENTOS EN EL HTML")
+
+function showItems(array) {
+    let itemCounter = 0;
+
+    for (item of array) {
+        document.getElementById("carrito-item"+itemCounter).innerText = item.name;
+        itemCounter += 1;
+    }
+}
+
+showItems(carrito)
 
 //Listar todos los elementos
 console.log("LISTAR ELEMENTOS POR CONSOLA")
@@ -42,8 +54,6 @@ function imprimir(item) {
 for (item of carrito) {
     imprimir(item);
 }
-
-console.log("///////////////")
 
 // Eliminar un producto del carrito de la compra.
 console.log("ELIMINAR PRODUCTOS")
